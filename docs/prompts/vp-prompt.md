@@ -24,7 +24,11 @@ Before generating, confirm you have all of the following:
 6. **`docs/specs/vp-spec.md`** — the authoritative content rules and hard gates (use this, not memory)
 7. **`docs/artifacts/vp-template.md`** — the structure to follow exactly
 
-If any of these inputs are missing or incomplete, do not proceed. State what is missing and stop.
+**Optional inputs (if SCK is adopted):**
+- **Frozen TM** (Threat Model) — provides threat model for security test scope; use to derive security verification scenarios
+- **Frozen SAR** (Security Assessment Record) — provides security assessment findings to verify in test campaigns
+
+If any required inputs (1–7) are missing or incomplete, do not proceed. State what is missing and stop. Optional inputs enhance security test coverage but are not blocking.
 
 ---
 

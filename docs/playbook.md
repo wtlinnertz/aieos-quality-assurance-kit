@@ -99,6 +99,8 @@ The VP defines what to test beyond unit tests: integration tests, system tests, 
 - TDD (test strategy, unit test coverage baseline)
 - ACF (performance, security, and compliance constraints)
 - WDD (work items for traceability)
+- Frozen TM from SCK (optional — if adopted, provides threat model for security test scope)
+- Frozen SAR from SCK (optional — if adopted, provides security assessment findings to verify)
 
 ### Process
 
