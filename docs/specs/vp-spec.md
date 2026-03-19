@@ -34,6 +34,12 @@ The VP serves three roles:
 - ACF — performance, security, and compliance constraints
 - WDD — work items for traceability
 
+**Optional inputs (if SCK adopted):**
+- Frozen Threat Model (TM) from SCK — informs security test scenarios in the VP's security test category
+- Frozen Security Assessment Record (SAR) from SCK — informs security verification scope and specific checks to include
+
+These SCK inputs are optional. The VP must function without them — the security test category uses ACF security constraints as the baseline when SCK artifacts are not available.
+
 ---
 
 ## Required Sections
