@@ -35,7 +35,7 @@ Each artifact type has exactly four governing files: spec, template, prompt, val
 
 Plus one entry gate:
 
-- **Quality Assurance Entry Record (QAER)** — Step 0 gate (human-authored). Confirms the ORD is frozen, names the QA owner, confirms test infrastructure is ready, and identifies integration points from SAD that require cross-component verification. Validated against `qaer-spec.md` before VP generation begins.
+- **Quality Assurance Entry Record (QAER)** — Step 0 gate (human-authored). Confirms the ORD is frozen, names the QA owner, confirms test infrastructure is ready, and identifies integration points from SAD that require cross-component verification. Validated against `qaer-spec.md` before VP generation begins. As a human-authored entry gate, QAER does not have a generation prompt (per governance model entry gate exception FW-049). QAER has three governing files (spec, template, validator).
 
 ## Key Rules
 
