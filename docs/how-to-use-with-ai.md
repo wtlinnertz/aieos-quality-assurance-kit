@@ -1,6 +1,6 @@
 # How to Use This Kit with AI
 
-This guide explains how to set up AI sessions for each step in the Quality Assurance Kit workflow. Follow the session setup instructions precisely — incorrect session setup is the most common cause of poor artifact quality.
+This guide explains how to set up AI sessions for each step in the Quality Assurance Kit workflow. Follow the session setup instructions precisely. Incorrect session setup is the most common cause of poor artifact quality.
 
 ---
 
@@ -8,13 +8,12 @@ This guide explains how to set up AI sessions for each step in the Quality Assur
 
 **One artifact per session.** Do not generate multiple artifacts in the same session.
 
-**Separate generation and validation.** Always validate in a new session. Never ask the AI that generated an artifact to validate it — this produces self-validation bias.
+**Separate generation and validation.** Always validate in a new session. Never ask the AI that generated an artifact to validate it. This produces self-validation bias.
 
 **Include full frozen documents.** Do not summarize upstream artifacts. Provide the complete document.
 
----
 
-## QAER — Human-Authored (No AI Generation Session)
+## QAER. Human-Authored (No AI Generation Session)
 
 The QAER is human-authored. Do not use AI to complete it. Complete the template yourself using information from the frozen ORD and supporting EEK artifacts.
 
@@ -31,18 +30,17 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in the validator."
 ```
 
----
 
-## VP — Generation Session
+## VP. Generation Session
 
 **Session setup:**
 ```
 Documents to provide:
 1. Frozen QAER (full document)
-2. SAD (System Architecture Document — full document, for integration points)
-3. TDD (Technical Design Document — full document, for test strategy)
-4. ACF (Architecture Context File — full document, for constraints)
-5. WDD (Work Decomposition Document — full document, for traceability)
+2. SAD (System Architecture Document. Full document, for integration points)
+3. TDD (Technical Design Document. Full document, for test strategy)
+4. ACF (Architecture Context File. Full document, for constraints)
+5. WDD (Work Decomposition Document. Full document, for traceability)
 6. docs/specs/vp-spec.md
 7. docs/artifacts/vp-template.md
 
@@ -52,7 +50,7 @@ Follow the prompt in docs/prompts/vp-prompt.md.
 Use the template exactly. Satisfy all hard gates in the spec.
 Ensure all SAD integration points are addressed.
 Map tests to WDD work items for traceability.
-Do not invent test cases — mark any missing information
+Do not invent test cases. Mark any missing information
 with [MISSING: reason]. Output pure Markdown."
 ```
 
@@ -75,9 +73,8 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/vp-validator.md."
 ```
 
----
 
-## TCR — Generation Session
+## TCR. Generation Session
 
 **Session setup:**
 ```
@@ -93,8 +90,8 @@ Prompt:
 "Generate a Test Campaign Record for this test campaign using the provided evidence.
 Follow the prompt in docs/prompts/tcr-prompt.md.
 Use the template exactly. Satisfy all hard gates in the spec.
-Account for all VP tests — document deviations for any tests not executed.
-Do not invent test results — mark missing evidence
+Account for all VP tests. Document deviations for any tests not executed.
+Do not invent test results. Mark missing evidence
 with [MISSING: reason]. Output pure Markdown."
 ```
 
@@ -117,9 +114,8 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/tcr-validator.md."
 ```
 
----
 
-## QGR — Generation Session
+## QGR. Generation Session
 
 **Session setup:**
 ```
@@ -159,7 +155,6 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/qgr-validator.md."
 ```
 
----
 
 ## Troubleshooting
 
@@ -170,7 +165,7 @@ Check that the generation session included all required inputs. Missing inputs a
 Ensure the SAD was provided in full to the VP generation session. If the SAD has changed since the QAER was frozen, the QAER may need to be re-entered.
 
 **Defects not properly categorized**
-Provide clear severity definitions in your organization's principles files. The TCR prompt uses severity as a key classification — ambiguous severity definitions cause downstream QGR failures.
+Provide clear severity definitions in your organization's principles files. The TCR prompt uses severity as a key classification. Ambiguous severity definitions cause downstream qgr failures.
 
 **QGR disposition seems incorrect**
 Review the TCR evidence. The QGR disposition is derived from TCR results and defect status. If the evidence does not support the desired disposition, the evidence is the issue, not the QGR.

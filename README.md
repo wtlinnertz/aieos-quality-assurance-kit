@@ -2,22 +2,18 @@
 
 **Layer 9 of the AIEOS system — Quality Assurance**
 
-This kit governs verification campaigns, integration/system testing, and pre-release quality gates. It receives a frozen Operational Readiness Document (ORD) from the Engineering Execution Kit and produces a Quality Gate Record that declares quality disposition — clearing the path to the Release & Exposure Kit or returning the initiative to engineering.
+This kit governs verification campaigns, integration/system testing, and pre-release quality gates. It receives a frozen Operational Readiness Document (ORD) from the Engineering Execution Kit and produces a Quality Gate Record that declares quality disposition, clearing the path to the Release & Exposure Kit or returning the initiative to engineering.
 
----
+## What this kit does
 
-## What This Kit Does
-
-The Engineering Execution Kit (Layer 4) produces an ORD that declares the system is operationally ready. But "operationally ready" is not the same as "quality verified." This kit governs the gap:
+The Engineering Execution Kit (Layer 4) produces an ORD that declares the system is operationally ready. But "operationally ready" isn't the same as "quality verified." This kit fills that gap:
 
 - **Verification planning** — What integration, system, performance, and security tests are needed beyond unit tests?
 - **Test campaign execution** — What evidence proves the tests were run and what were the results?
 - **Defect tracking** — What defects were found, how severe are they, and what is their status?
 - **Quality disposition** — Does the evidence support proceeding to release, proceeding with conditions, or returning to engineering?
 
----
-
-## Artifact Types
+## Artifact types
 
 This kit produces three governed artifact types plus an entry gate:
 
@@ -30,17 +26,13 @@ This kit produces three governed artifact types plus an entry gate:
 
 Each governed artifact type has exactly four governing files: spec, template, prompt, validator.
 
----
-
-## Quick Start
+## Quick start
 
 1. Read `docs/playbook.md` — the complete process definition
 2. Read `docs/how-to-use-with-ai.md` — session setup and AI tool guidance
 3. See `examples/` — worked examples (initially empty; to be populated)
 
----
-
-## Repository Structure
+## Repository structure
 
 ```
 docs/
@@ -61,9 +53,7 @@ tests/
 CLAUDE.md              # AI operating instructions
 ```
 
----
-
-## AIEOS Layer
+## AIEOS layer
 
 | Layer | Kit | Status |
 |-------|-----|--------|
