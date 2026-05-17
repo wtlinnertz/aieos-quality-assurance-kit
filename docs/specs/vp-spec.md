@@ -1,6 +1,6 @@
 # Verification Plan — Specification
 
-Version: v1.0
+Version: v1.1
 
 The Verification Plan (VP) defines the test scope beyond unit tests for an initiative entering quality assurance. It covers integration tests, system tests, performance tests, and security tests. It is derived from the SAD integration points, TDD test strategy, and ACF constraints.
 
@@ -39,6 +39,18 @@ The VP serves three roles:
 - Frozen Security Assessment Record (SAR) from SCK — informs security verification scope and specific checks to include
 
 These SCK inputs are optional. The VP must function without them — the security test category uses ACF security constraints as the baseline when SCK artifacts are not available.
+
+**Compliance ordering constraint (applies when CER is in scope):**
+
+When the initiative has a Compliance Evidence Record (CER) in scope — meaning a compliance mandate was identified and SCK CER was adopted — the following SCK artifacts must all be in Frozen status before VP generation proceeds:
+- Threat Model (TM)
+- Security Assessment Record (SAR)
+- Compliance Evidence Record (CER)
+- Dependency Audit Record (DAR)
+
+When CER is not in scope, this constraint does not apply. The VP Document Control section must declare one of:
+- "CER in scope — TM: {ID}, SAR: {ID}, CER: {ID}, DAR: {ID}, all Frozen."
+- "CER not in scope — compliance ordering constraint N/A."
 
 ---
 
@@ -165,3 +177,4 @@ These SCK inputs are optional. The VP must function without them — the securit
 2. **traceability** — Traceability matrix present; every QAER integration point has at least one test; every test traces to at least one upstream requirement (WDD, SAD, or ACF)
 3. **environment_specification** — At least one test environment specified with configuration details, data requirements, and isolation level for each included test category
 4. **acceptance_criteria** — Measurable pass/fail criteria present for each included test category; criteria are objective and specific (numeric thresholds where applicable)
+5. **compliance_sck_ordering** (conditional) — When CER is in scope: frozen TM, SAR, CER, and DAR IDs are all referenced and declared Frozen in §Document Control. When CER is not in scope: §Document Control states "CER not in scope — compliance ordering constraint N/A." Ambiguity or silence fails this gate.

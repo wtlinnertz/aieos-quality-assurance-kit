@@ -78,6 +78,26 @@ Check:
 
 ---
 
+### Gate 5: compliance_sck_ordering (conditional)
+
+Check the §Document Control section for one of two declarations:
+
+**Path A — CER not in scope:**
+- §Document Control contains the exact phrase: "CER not in scope — compliance ordering constraint N/A."
+- Pass: phrase present and unambiguous.
+- Fail: phrase absent, ambiguous, or qualified.
+
+**Path B — CER in scope:**
+- §Document Control must reference frozen TM, SAR, CER, and DAR artifact IDs with explicit Frozen status declarations.
+- All four must be present: TM ID, SAR ID, CER ID, DAR ID.
+- All four must be declared Frozen (not Draft, Approved, or Validated).
+- Pass: all four IDs present and all four declared Frozen.
+- Fail: any ID missing; any ID not declared Frozen; §Document Control contains no declaration (silence fails).
+
+**Determining which path applies:** If the initiative has a CER in scope and §Document Control omits any declaration about compliance ordering, the gate fails. Do not assume CER is not in scope because it is not mentioned — silence is a failure.
+
+---
+
 ## Output Format
 
 Produce a JSON result in exactly this format:
@@ -90,7 +110,8 @@ Produce a JSON result in exactly this format:
     "test_scope_coverage": "PASS | FAIL",
     "traceability": "PASS | FAIL",
     "environment_specification": "PASS | FAIL",
-    "acceptance_criteria": "PASS | FAIL"
+    "acceptance_criteria": "PASS | FAIL",
+    "compliance_sck_ordering": "PASS | FAIL"
   },
   "blocking_issues": [
     {

@@ -12,10 +12,11 @@
 | QAER Reference | {QAER-{PROJECT}-{NNN}} |
 | ORD Reference | {ORD-{PROJECT}-{NNN}} |
 | Status | Draft / Validated / Freeze Pending / Frozen |
-| Governance Model Version | 1.0 |
+| Governance Model Version | 1.7 |
 | Prompt Version | {prompt version} |
 | Spec Version | {spec version} |
 | Principles Version | {principles file versions} |
+| Compliance ordering | [ ] CER not in scope — compliance ordering constraint N/A. [ ] CER in scope — TM: {ID} Frozen, SAR: {ID} Frozen, CER: {ID} Frozen, DAR: {ID} Frozen. |
 
 ---
 

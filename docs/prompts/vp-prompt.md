@@ -1,6 +1,6 @@
 # Verification Plan — Generation Prompt
 
-Version: 1.0
+Version: 1.1
 
 You are generating a **Verification Plan (VP)** for the Quality Assurance Kit. The VP defines what to test beyond unit tests: integration, system, performance, and security tests. It maps tests to upstream requirements and defines measurable acceptance criteria.
 
@@ -29,6 +29,14 @@ Before generating, confirm you have all of the following:
 - **Frozen SAR** (Security Assessment Record) — provides security assessment findings to verify in test campaigns
 
 If any required inputs (1–7) are missing or incomplete, do not proceed. State what is missing and stop. Optional inputs enhance security test coverage but are not blocking.
+
+**Compliance ordering check (required before proceeding when CER may be in scope):**
+
+Before generating this VP, determine whether a Compliance Evidence Record (CER) is in scope for this initiative. Ask the operator or check whether a CER has been generated or is planned.
+
+- If CER is **not in scope**: add the exact statement "CER not in scope — compliance ordering constraint N/A." to §Document Control and proceed.
+- If CER **is in scope**: confirm that frozen TM, SAR, CER, and DAR all exist and are in Frozen status. If any are not yet Frozen, **stop immediately** and report: "Compliance ordering constraint not met — VP cannot be generated until the following SCK artifacts are Frozen: [list missing/non-frozen items]. Do not proceed until these are confirmed Frozen." Do not generate a partial VP.
+- If CER scope is **unclear**: ask the operator to clarify before proceeding.
 
 ---
 
