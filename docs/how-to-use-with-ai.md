@@ -12,7 +12,6 @@ This guide explains how to set up AI sessions for each step in the Quality Assur
 
 **Include full frozen documents.** Do not summarize upstream artifacts. Provide the complete document.
 
-
 ## QAER. Human-Authored (No AI Generation Session)
 
 The QAER is human-authored. Do not use AI to complete it. Complete the template yourself using information from the frozen ORD and supporting EEK artifacts.
@@ -29,7 +28,6 @@ Use only the spec as the source of truth for pass/fail criteria.
 Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in the validator."
 ```
-
 
 ## VP. Generation Session
 
@@ -73,7 +71,6 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/vp-validator.md."
 ```
 
-
 ## TCR. Generation Session
 
 **Session setup:**
@@ -114,7 +111,6 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/tcr-validator.md."
 ```
 
-
 ## QGR. Generation Session
 
 **Session setup:**
@@ -154,7 +150,6 @@ Use only the spec as the source of truth for pass/fail criteria.
 Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/qgr-validator.md."
 ```
-
 
 ## Troubleshooting
 
