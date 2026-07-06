@@ -30,7 +30,6 @@ The VP spec requires measurable acceptance criteria for each test category. If y
 
 The TCR and QGR specs reference defect severity levels (critical, high, medium, low). If your organization uses different severity definitions, document them in a principles file and ensure the TCR prompt references your definitions.
 
-
 ## What Not to Adapt
 
 ### Specs
@@ -47,7 +46,6 @@ Validators evaluate against specs. If a validator is producing unexpected result
 
 `docs/governance-model.md` is a synchronized copy of the canonical governance model. Do not edit it. If you believe the governance model should change, update `aieos-governance-foundation/governance-model.md` and sync all kit copies.
 
-
 ## Adding Artifact Types
 
 If your organization needs additional governed artifacts (e.g., an accessibility verification record, a compliance test record), follow the four-file system:
@@ -58,7 +56,6 @@ If your organization needs additional governed artifacts (e.g., an accessibility
 4. Write the prompt. Generation behavior, references spec and template
 
 Register the new artifact type in the playbook, index, and CLAUDE.md.
-
 
 ## Tool Bindings
 
@@ -74,7 +71,6 @@ docs/bindings/
 ```
 
 Bindings are not governed artifacts. They have no spec, validator, or prompt. update them when your tooling changes without touching the governed files.
-
 
 ## First-Time Setup Checklist
 

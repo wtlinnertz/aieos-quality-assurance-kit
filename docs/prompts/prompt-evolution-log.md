@@ -9,7 +9,7 @@ Generation prompts produce governed artifacts. The QAER has no generation prompt
 ## Generation Prompts
 
 | Prompt | From | To | Date | Triggered By | Change Summary | Approved By | Amendment |
-|--------|------|----|------|-------------|----------------|-------------|-----------| 
+|--------|------|----|------|-------------|----------------|-------------|-----------|
 | vp-prompt.md | — | 1.0 | 2026-03-09 | Initial release | Initial version | — | — |
 | vp-prompt.md | 1.0 | 1.1 | 2026-05-17 | ISSUE-03 gap closure (audit 2026-05-17) | Added compliance ordering check — halt instruction before VP generation when CER is in scope and SCK artifacts are not all Frozen. Closes gap where compliance initiatives could produce VP without frozen TM/SAR/CER/DAR. | Todd Linnertz | AM-001 |
 | tcr-prompt.md | — | 1.0 | 2026-03-09 | Initial release | Initial version | — | — |
