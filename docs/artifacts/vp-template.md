@@ -6,12 +6,13 @@
 
 | Field | Value |
 |-------|-------|
-| VP ID | VP-{PROJECT}-{NNN} |
+| Artifact ID | VP-{PROJECT}-{NNN} |
+| Owner | {owner} |
 | Date | {YYYY-MM-DD} |
 | Version | {v1.0} |
 | QAER Reference | {QAER-{PROJECT}-{NNN}} |
 | ORD Reference | {ORD-{PROJECT}-{NNN}} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
+| Status | DRAFT |
 | Governance Model Version | 1.7 |
 | Prompt Version | {prompt version} |
 | Spec Version | {spec version} |

@@ -6,12 +6,13 @@
 
 | Field | Value |
 |-------|-------|
-| QGR ID | QGR-{PROJECT}-{NNN} |
+| Artifact ID | QGR-{PROJECT}-{NNN} |
+| Owner | {owner} |
 | Date | {YYYY-MM-DD} |
 | VP Reference | {VP-{PROJECT}-{NNN}} |
 | QAER Reference | {QAER-{PROJECT}-{NNN}} |
 | TCR References | {TCR-{PROJECT}-{NNN}, TCR-{PROJECT}-{NNN}, ...} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
+| Status | DRAFT |
 | Governance Model Version | 1.0 |
 | Prompt Version | {prompt version} |
 | Spec Version | {spec version} |
