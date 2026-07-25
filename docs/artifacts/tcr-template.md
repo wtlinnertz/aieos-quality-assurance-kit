@@ -6,11 +6,12 @@
 
 | Field | Value |
 |-------|-------|
-| TCR ID | TCR-{PROJECT}-{NNN} |
+| Artifact ID | TCR-{PROJECT}-{NNN} |
+| Owner | {owner} |
 | Date | {YYYY-MM-DD} |
 | VP Reference | {VP-{PROJECT}-{NNN}} |
 | Campaign Scope | {which VP test categories this TCR covers} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
+| Status | DRAFT |
 | Governance Model Version | 1.0 |
 | Prompt Version | {prompt version} |
 | Spec Version | {spec version} |

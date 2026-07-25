@@ -6,10 +6,11 @@
 
 | Field | Value |
 |-------|-------|
-| QAER ID | QAER-{PROJECT}-{NNN} |
+| Artifact ID | QAER-{PROJECT}-{NNN} |
+| Owner | {owner} |
 | Date | {YYYY-MM-DD} |
 | Initiative Summary | {1-2 sentences identifying the initiative and the scope of quality verification} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
+| Status | DRAFT |
 | Governance Model Version | 1.0 |
 | Prompt Version | N/A |
 | Spec Version | {spec version} |
